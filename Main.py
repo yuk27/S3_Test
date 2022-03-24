@@ -25,4 +25,6 @@ bucket = s3.list_objects(Bucket=BUCKET_NAME)
 for file in bucket['Contents']:
     name = file['Key']
     print("Downloading file: {0}".format(name))
+    if not os.path.exists('res'):
+        os.mkdir('res')
     s3.download_file(BUCKET_NAME, name, 'res/{0}'.format(name))
