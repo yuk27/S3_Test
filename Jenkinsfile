@@ -27,6 +27,13 @@ echo "JOB_URL" :: $JOB_URL
       }
     }
 
+    stage('') {
+      steps {
+        sh '''value=`cat lorem.txt`
+echo "$value"'''
+      }
+    }
+
   }
   environment {
     USER_CREDENTIALS = credentials('S3_CREDENTIALS')
