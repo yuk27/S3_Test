@@ -16,7 +16,8 @@ echo "WORKSPACE" :: $WORKSPACE
 echo "JENKINS_HOME" :: $JENKINS_HOME
 echo "JENKINS_URL" :: $JENKINS_URL
 echo "BUILD_URL" ::$BUILD_URL
-echo "JOB_URL" :: $JOB_URL'''
+echo "JOB_URL" :: $JOB_URL
+echo "S3_CREDENTIALS" :: $S3_CREDENTIALS'''
         sh 'python3 -m pip install boto3'
         sh 'python3 Main.py'
       }
