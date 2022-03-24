@@ -23,6 +23,7 @@ echo "JOB_URL" :: $JOB_URL
 '''
         sh 'python3 -m pip install boto3'
         sh 'python3 Main.py'
+        stash(includes: 'res/*', name: 'res')
       }
     }
 
