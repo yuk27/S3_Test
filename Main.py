@@ -1,5 +1,8 @@
 import boto3
 
+
+
+"""
 with open('new_user_credentials.csv', 'r') as file:
     file.readline()
     creds_parts = file.readline().split(",")
@@ -20,3 +23,4 @@ for file in bucket['Contents']:
     name = file['Key']
     print("Downloading file: {0}".format(name))
     s3.download_file(BUCKET_NAME, name, 'res/{0}'.format(name))
+"""
