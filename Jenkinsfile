@@ -1,15 +1,10 @@
 pipeline {
   agent any
-
-  environment {
-        USER_CREDENTIALS = credentials('S3_CREDENTIALS')
-  }
-
   stages {
     stage('Run Python') {
       steps {
         sh '''echo "S3_CREDENTIALS" :: $S3_CREDENTIALS
-        echo $USER_CREDENTIALS_USR
+echo "USER_CREDENTIALS_USR" :: $USER_CREDENTIALS_USR
 echo "BUILD_NUMBER" :: $BUILD_NUMBER
 echo "BUILD_ID" :: $BUILD_ID
 echo "BUILD_DISPLAY_NAME" :: $BUILD_DISPLAY_NAME
@@ -30,5 +25,8 @@ echo "JOB_URL" :: $JOB_URL
       }
     }
 
+  }
+  environment {
+    USER_CREDENTIALS = credentials('S3_CREDENTIALS')
   }
 }
