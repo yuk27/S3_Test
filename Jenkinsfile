@@ -29,7 +29,7 @@ echo "JOB_URL" :: $JOB_URL
 
     stage('Print') {
       steps {
-        sh '''echo lorem.txt
+        sh '''cat res/lorem.txt
 echo "END"'''
       }
     }
