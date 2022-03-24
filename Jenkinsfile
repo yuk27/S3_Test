@@ -27,10 +27,11 @@ echo "JOB_URL" :: $JOB_URL
       }
     }
 
-    stage('') {
+    stage('Print') {
       steps {
         sh '''value=`cat lorem.txt`
-echo "$value"'''
+echo "$value"
+echo "END"'''
       }
     }
 
